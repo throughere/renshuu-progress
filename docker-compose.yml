@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:18
+    container_name: postgres-dev
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: throughere
+      POSTGRES_PASSWORD: default_1
+      TZ: Europe/Kyiv
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init-db:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql
+
+volumes:
+  postgres_data:
