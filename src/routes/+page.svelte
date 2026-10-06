@@ -3,4 +3,7 @@
   let { data }: PageProps = $props();
 </script>
 
-<pre>{JSON.stringify(data.renshuu, null, 2)}</pre>
+<p class="text-3xl">
+  Name on renshuu: {data.salo_profile?.name}
+</p>
+<pre>{JSON.stringify(data.salo_profile, null, 2)}</pre>
