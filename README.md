@@ -1,56 +1,14 @@
-# sv
+# renshuu-progress
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+<img src="https://app.renshuu.org/img/adventure/xzd4ozt.png?v=20240408" alt="MarineGEO circle logo" style="width: 100px;"/>
+<img src="https://app.renshuu.org/img/adventure/w30w8jt.png?v=20240408" alt="MarineGEO circle logo" style="width: 100px;"/>
+<img src="https://app.renshuu.org/img/adventure/tsmnd5y.png?v=20240408" alt="MarineGEO circle logo" style="width: 100px;"/>
+<img src="https://app.renshuu.org/img/adventure/f/ey6hzqj_120_20240408.png?v=2g" alt="MarineGEO circle logo" style="width:100px;"/>
 
-## Creating a project
+### some information
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-bun x sv@1.1.0 create --template minimal --types ts --install bun jp-progress
-```
-
-## Adding features
-
-Add features to your project with `sv add`:
-
-```sh
-npx sv add
-```
-
-For example, to add Tailwind CSS:
-
-```sh
-npx sv add tailwindcss
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+This website was created by me for the reason that the renshuu website
+doesn't have the easy way to track your progress on their website.
+On this website you can pull most of your data out of renshuu
+and look at them in comfort way. Mostly, what you've studied and what is left.
+Also I'm trying to learn a little bit of Typescript lol.
