@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "drizzle-orm": "^1.0.0-rc.4",
+    "mode-watcher": "^1.1.0",
     "pg": "^8.23.1"
   }
 }
