@@ -1,0 +1,202 @@
+/* AI generated effects for highlighting mastered kanji characters */
+
+/* Effects for 75-100% mastery kanji. Each has a look that is always visible,
+   plus an animation on top. --fx-delay is set per kanji so they don't run in sync. */
+
+/* these paint the kanji with a gradient instead of its text color */
+.fx-shine,
+.fx-holo,
+.fx-gold,
+.fx-platinum,
+.fx-fire {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shine and holo: a streak (first layer) sweeps over a fixed base (second layer) */
+.fx-shine,
+.fx-holo {
+  background-size:
+    250% 100%,
+    100% 100%;
+  animation: fx-sweep 3.5s ease-in-out var(--fx-delay, 0s) infinite;
+}
+
+.fx-shine {
+  background-image:
+    linear-gradient(110deg, transparent 40%, rgb(255 255 255 / 90%) 50%, transparent 60%),
+    linear-gradient(
+      160deg,
+      color-mix(in oklch, currentColor, white 45%),
+      currentColor 45%,
+      color-mix(in oklch, currentColor, black 30%)
+    );
+  filter: drop-shadow(0 0 2px color-mix(in oklch, currentColor 55%, transparent));
+}
+
+.fx-holo {
+  background-image:
+    linear-gradient(
+      110deg,
+      transparent 38%,
+      rgb(255 110 199 / 85%) 42%,
+      rgb(255 216 110 / 85%) 46%,
+      rgb(110 255 168 / 85%) 50%,
+      rgb(110 200 255 / 85%) 54%,
+      rgb(179 110 255 / 85%) 58%,
+      transparent 62%
+    ),
+    linear-gradient(
+      110deg,
+      color-mix(in oklch, currentColor, #ff6ec7 65%),
+      color-mix(in oklch, currentColor, #ffd86e 25%) 30%,
+      currentColor 50%,
+      color-mix(in oklch, currentColor, #6effa8 25%) 70%,
+      color-mix(in oklch, currentColor, #6ec8ff 65%)
+    );
+  filter: drop-shadow(0 0 3px rgb(179 110 255 / 55%));
+}
+
+@keyframes fx-sweep {
+  from {
+    background-position:
+      100% 0,
+      0 0;
+  }
+  45%,
+  to {
+    background-position:
+      0 0,
+      0 0;
+  }
+}
+
+/* Gold and platinum: foil with a slow sheen */
+.fx-gold,
+.fx-platinum {
+  background-size: 250% 100%;
+  animation: fx-foil 4s ease-in-out var(--fx-delay, 0s) infinite alternate;
+}
+
+/* several bright and dark bands, so it reads as metal and not as flat N3 amber */
+.fx-gold {
+  background-image: linear-gradient(
+    110deg,
+    #8a5a00,
+    #d4a017 18%,
+    #fff1a8 34%,
+    #d4a017 48%,
+    #8a5a00 62%,
+    #e8b923 78%,
+    #fff1a8 90%,
+    #b07d0a
+  );
+  filter: drop-shadow(0 0 2px rgb(232 185 35 / 55%));
+}
+
+/* darker silver on the light theme, so it doesn't vanish on white */
+.fx-platinum {
+  background-image: linear-gradient(110deg, #4b5563, #8b95a1 25%, #d1d7de 45%, #8b95a1 60%, #4b5563);
+  filter: drop-shadow(0 0 2px rgb(75 85 99 / 35%));
+}
+
+.dark .fx-platinum {
+  background-image: linear-gradient(110deg, #9aa3ad, #e6ebf0 25%, #ffffff 45%, #e6ebf0 60%, #9aa3ad);
+  filter: drop-shadow(0 0 3px rgb(220 230 255 / 45%));
+}
+
+@keyframes fx-foil {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+/* Fire: the kanji burns from a hot base to red tips; moving the gradient makes it flicker */
+.fx-fire {
+  background-image: linear-gradient(0deg, #f59e0b, #ea580c 40%, #dc2626 70%, #991b1b);
+  background-size: 100% 200%;
+  filter: drop-shadow(0 -1px 2px rgb(234 88 12 / 60%));
+  animation: fx-flame 1.4s ease-in-out var(--fx-delay, 0s) infinite alternate;
+}
+
+.dark .fx-fire {
+  background-image: linear-gradient(0deg, #fff3b0, #ffc93c 25%, #ff8a1f 50%, #ff4d1a 75%, #c81d1d);
+}
+
+@keyframes fx-flame {
+  from {
+    background-position: 0 100%;
+    filter: drop-shadow(0 -1px 2px rgb(255 120 30 / 70%));
+  }
+  50% {
+    background-position: 0 55%;
+    filter: drop-shadow(0 -3px 3px rgb(255 100 20 / 80%));
+  }
+  to {
+    background-position: 0 80%;
+    filter: drop-shadow(0 -2px 3px rgb(255 80 20 / 70%));
+  }
+}
+
+/* Sparkle: two stars at the corners pulse between dim and bright.
+   Gold stars by default, the kanji's own color for fx-sparkle-color. */
+.fx-sparkle,
+.fx-sparkle-color {
+  position: relative;
+  --star: #f5b301;
+  --star-glow: rgb(255 213 74 / 80%);
+}
+
+.fx-sparkle-color {
+  --star: currentColor;
+  --star-glow: currentColor;
+}
+
+:is(.fx-sparkle, .fx-sparkle-color)::before,
+:is(.fx-sparkle, .fx-sparkle-color)::after {
+  content: "✦";
+  position: absolute;
+  pointer-events: none;
+  /* set explicitly so the stars stay visible on shine, which makes the kanji's fill transparent */
+  -webkit-text-fill-color: var(--star);
+  text-shadow: 0 0 4px var(--star-glow);
+  animation: fx-twinkle 2.4s ease-in-out var(--fx-delay, 0s) infinite;
+}
+
+:is(.fx-sparkle, .fx-sparkle-color)::before {
+  top: -0.2em;
+  right: -0.25em;
+  font-size: 0.32em;
+}
+
+:is(.fx-sparkle, .fx-sparkle-color)::after {
+  bottom: -0.05em;
+  left: -0.25em;
+  font-size: 0.24em;
+  animation-delay: calc(var(--fx-delay, 0s) + 1.2s);
+}
+
+/* never fully fades out, so the stars always mark the kanji */
+@keyframes fx-twinkle {
+  from,
+  to {
+    opacity: 0.5;
+    transform: scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) rotate(45deg);
+  }
+}
+
+/* with reduced motion, keep each effect's look but stop the movement */
+@media (prefers-reduced-motion: reduce) {
+  [class*="fx-"],
+  [class*="fx-"]::before,
+  [class*="fx-"]::after {
+    animation: none !important;
+  }
+}

@@ -6,7 +6,6 @@
 </script>
 
 <Button
-  class="fixed ml-5"
   onclick={toggleMode}
   variant="outline"
   size="icon"
