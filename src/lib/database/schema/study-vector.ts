@@ -1,5 +1,12 @@
-import { date, integer, pgTable, primaryKey, smallint, varchar } from "drizzle-orm/pg-core"
-import { profile } from "./profile"
+import {
+  date,
+  integer,
+  pgTable,
+  primaryKey,
+  smallint,
+  varchar,
+} from "drizzle-orm/pg-core";
+import { profile } from "./profile";
 
 export const studyVector = pgTable(
   "study_vector",
@@ -14,7 +21,9 @@ export const studyVector = pgTable(
     missed_count: integer().notNull(),
     mastery_perc: smallint().notNull(),
     last_quizzed: date(),
-    next_quiz: date()
+    next_quiz: date(),
   },
-  (t) => [primaryKey({ columns: [t.profile_id, t.termtype, t.term_id, t.name] })]
-)
+  (t) => [
+    primaryKey({ columns: [t.profile_id, t.termtype, t.term_id, t.name] }),
+  ],
+);

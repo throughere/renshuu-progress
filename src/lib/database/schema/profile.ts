@@ -1,4 +1,4 @@
-import { integer, pgTable, text, varchar } from "drizzle-orm/pg-core"
+import { integer, pgTable, text, varchar } from "drizzle-orm/pg-core";
 
 export const profile = pgTable("profile", {
   id: integer().primaryKey(),
@@ -16,5 +16,5 @@ export const profile = pgTable("profile", {
   total_vocab: integer(),
   total_kanji: integer(),
   total_grammar: integer(),
-  total_sent: integer()
-})
+  total_sent: integer(),
+});

@@ -1,5 +1,12 @@
-import { integer, pgTable, primaryKey, smallint, text, varchar } from "drizzle-orm/pg-core"
-import { profile } from "./profile"
+import {
+  integer,
+  pgTable,
+  primaryKey,
+  smallint,
+  text,
+  varchar,
+} from "drizzle-orm/pg-core";
+import { profile } from "./profile";
 
 export const kanjiTerm = pgTable(
   "kanji_term",
@@ -19,7 +26,7 @@ export const kanjiTerm = pgTable(
     radical_name: text().notNull(),
     correct_count: integer().notNull(),
     missed_count: integer().notNull(),
-    mastery_avg_perc: smallint().notNull()
+    mastery_avg_perc: smallint().notNull(),
   },
-  (t) => [primaryKey({ columns: [t.profile_id, t.id] })]
-)
+  (t) => [primaryKey({ columns: [t.profile_id, t.id] })],
+);

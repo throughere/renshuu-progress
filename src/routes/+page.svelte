@@ -10,7 +10,7 @@
 
 <div class="mx-20 my-4 flex flex-col gap-6">
   <section class="flex flex-col gap-2">
-    <h2 class="text-lg font-medium text-center">Profile</h2>
+    <h2 class="text-center text-lg font-medium">Profile</h2>
     <div class="flex flex-wrap justify-center gap-4 *:w-48">
       <Card.Root>
         <Card.Header>
@@ -35,7 +35,7 @@
     </div>
   </section>
   <section class="flex flex-col gap-2">
-    <h2 class="text-lg font-medium text-center">Studied in total</h2>
+    <h2 class="text-center text-lg font-medium">Studied in total</h2>
     <div class="flex flex-wrap justify-center gap-4 *:w-48">
       <Card.Root>
         <Card.Header>
@@ -92,7 +92,7 @@
   </section>
 
   <section class="flex flex-col gap-2">
-    <h2 class="text-lg font-medium text-center">Studied today</h2>
+    <h2 class="text-center text-lg font-medium">Studied today</h2>
     <div class="flex flex-wrap justify-center gap-4 *:w-48">
       <Card.Root>
         <Card.Header>

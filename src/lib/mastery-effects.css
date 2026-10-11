@@ -24,14 +24,21 @@
 
 .fx-shine {
   background-image:
-    linear-gradient(110deg, transparent 40%, rgb(255 255 255 / 90%) 50%, transparent 60%),
+    linear-gradient(
+      110deg,
+      transparent 40%,
+      rgb(255 255 255 / 90%) 50%,
+      transparent 60%
+    ),
     linear-gradient(
       160deg,
       color-mix(in oklch, currentColor, white 45%),
       currentColor 45%,
       color-mix(in oklch, currentColor, black 30%)
     );
-  filter: drop-shadow(0 0 2px color-mix(in oklch, currentColor 55%, transparent));
+  filter: drop-shadow(
+    0 0 2px color-mix(in oklch, currentColor 55%, transparent)
+  );
 }
 
 .fx-holo {
@@ -96,12 +103,26 @@
 
 /* darker silver on the light theme, so it doesn't vanish on white */
 .fx-platinum {
-  background-image: linear-gradient(110deg, #4b5563, #8b95a1 25%, #d1d7de 45%, #8b95a1 60%, #4b5563);
+  background-image: linear-gradient(
+    110deg,
+    #4b5563,
+    #8b95a1 25%,
+    #d1d7de 45%,
+    #8b95a1 60%,
+    #4b5563
+  );
   filter: drop-shadow(0 0 2px rgb(75 85 99 / 35%));
 }
 
 .dark .fx-platinum {
-  background-image: linear-gradient(110deg, #9aa3ad, #e6ebf0 25%, #ffffff 45%, #e6ebf0 60%, #9aa3ad);
+  background-image: linear-gradient(
+    110deg,
+    #9aa3ad,
+    #e6ebf0 25%,
+    #ffffff 45%,
+    #e6ebf0 60%,
+    #9aa3ad
+  );
   filter: drop-shadow(0 0 3px rgb(220 230 255 / 45%));
 }
 
@@ -116,14 +137,27 @@
 
 /* Fire: the kanji burns from a hot base to red tips; moving the gradient makes it flicker */
 .fx-fire {
-  background-image: linear-gradient(0deg, #f59e0b, #ea580c 40%, #dc2626 70%, #991b1b);
+  background-image: linear-gradient(
+    0deg,
+    #f59e0b,
+    #ea580c 40%,
+    #dc2626 70%,
+    #991b1b
+  );
   background-size: 100% 200%;
   filter: drop-shadow(0 -1px 2px rgb(234 88 12 / 60%));
   animation: fx-flame 1.4s ease-in-out var(--fx-delay, 0s) infinite alternate;
 }
 
 .dark .fx-fire {
-  background-image: linear-gradient(0deg, #fff3b0, #ffc93c 25%, #ff8a1f 50%, #ff4d1a 75%, #c81d1d);
+  background-image: linear-gradient(
+    0deg,
+    #fff3b0,
+    #ffc93c 25%,
+    #ff8a1f 50%,
+    #ff4d1a 75%,
+    #c81d1d
+  );
 }
 
 @keyframes fx-flame {

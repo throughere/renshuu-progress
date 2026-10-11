@@ -1,1 +1,1 @@
-<h1 class="text-2xl font-medium text-center">All terms</h1>
+<h1 class="text-center text-2xl font-medium">All terms</h1>

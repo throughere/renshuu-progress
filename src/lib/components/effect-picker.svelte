@@ -29,7 +29,9 @@
     <SparklesIcon />
   </PopoverTrigger>
   <PopoverContent class="w-56 gap-0.5 p-1" align="end">
-    <p class="text-muted-foreground px-2 py-1 text-xs">Effect for 75-100% kanji</p>
+    <p class="text-muted-foreground px-2 py-1 text-xs">
+      Effect for 75-100% kanji
+    </p>
     {#each Object.entries(mastery_effects) as [name, effect_class]}
       <button
         class="hover:bg-accent flex items-center gap-3 rounded-md px-2 py-1.5 text-left text-sm"

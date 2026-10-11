@@ -55,13 +55,11 @@
 
 {#each groups as [jlpt, kanjis]}
   <!-- jlpt level header -->
-  <div
-    class="{color(jlpt)} font-bold text-3xl mt-4 mb-2 text-center"
-  >
+  <div class="{color(jlpt)} mt-4 mb-2 text-center text-3xl font-bold">
     {jlpt}
   </div>
   <!-- kanji list block -->
-  <div class="flex flex-wrap gap-2 justify-center">
+  <div class="flex flex-wrap justify-center gap-2">
     {#each kanjis as kanji}
       {@const step = masteryStep(kanji.mastery_avg_perc)}
       <div
@@ -79,7 +77,9 @@
           <PopoverContent class="gap-3 p-3">
             <div class="flex items-start gap-3">
               <span
-                class="{color(kanji.jlpt)} inline-block text-5xl leading-none {effectClass(step)}"
+                class="{color(
+                  kanji.jlpt,
+                )} inline-block text-5xl leading-none {effectClass(step)}"
                 style:opacity={step.opacity}
               >
                 {kanji.kanji}

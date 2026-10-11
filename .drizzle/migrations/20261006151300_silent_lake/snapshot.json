@@ -2,9 +2,7 @@
   "version": "8",
   "dialect": "postgres",
   "id": "d425cbc9-4be4-425a-9ca8-7db7a4c52550",
-  "prevIds": [
-    "00000000-0000-0000-0000-000000000000"
-  ],
+  "prevIds": ["00000000-0000-0000-0000-000000000000"],
   "ddl": [
     {
       "isRlsEnabled": false,
@@ -364,14 +362,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "profile_id"
-      ],
+      "columns": ["profile_id"],
       "schemaTo": "public",
       "tableTo": "profile",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "level_progress_profile_id_profile_id_fkey",
@@ -381,14 +375,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "profile_id"
-      ],
+      "columns": ["profile_id"],
       "schemaTo": "public",
       "tableTo": "profile",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "streak_profile_id_profile_id_fkey",
@@ -397,11 +387,7 @@
       "table": "streak"
     },
     {
-      "columns": [
-        "profile_id",
-        "category",
-        "level"
-      ],
+      "columns": ["profile_id", "category", "level"],
       "nameExplicit": false,
       "name": "level_progress_pkey",
       "entityType": "pks",
@@ -409,10 +395,7 @@
       "table": "level_progress"
     },
     {
-      "columns": [
-        "profile_id",
-        "category"
-      ],
+      "columns": ["profile_id", "category"],
       "nameExplicit": false,
       "name": "streak_pkey",
       "entityType": "pks",
@@ -420,9 +403,7 @@
       "table": "streak"
     },
     {
-      "columns": [
-        "id"
-      ],
+      "columns": ["id"],
       "nameExplicit": false,
       "name": "profile_pkey",
       "schema": "public",

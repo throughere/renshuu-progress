@@ -13,7 +13,7 @@
   };
 </script>
 
-<h1 class="text-2xl font-medium text-center">
+<h1 class="text-center text-2xl font-medium">
   {titles[page.params.type ?? ""]}
 </h1>
 <div class="m-4 p-1">
