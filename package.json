@@ -10,6 +10,7 @@
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "format": "prettier --write .",
     "db:studio": "drizzle-kit studio",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate --config drizzle.config.ts"
@@ -26,6 +27,9 @@
     "bits-ui": "^2.18.0",
     "cn": "^0.3.0",
     "drizzle-kit": "^1.0.0-rc.4",
+    "prettier": "^3.9.10",
+    "prettier-plugin-svelte": "^4.1.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "shadcn-svelte": "^1.7.0",
     "svelte": "^5.57.1",
     "svelte-check": "^4.6.0",
