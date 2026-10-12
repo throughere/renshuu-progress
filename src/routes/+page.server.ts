@@ -1,9 +1,6 @@
-import { db } from "#lib/database/db-server.ts";
+import { redirect } from "@sveltejs/kit";
 import type { PageServerLoad } from "./$types";
 
-export const load: PageServerLoad = async ({ parent }) => {
-  const { id } = await parent();
-  const profile = await db.query.profile.findFirst({ where: { id: id } });
-
-  return { profile };
+export const load: PageServerLoad = async ({ url }) => {
+  redirect(307, `/general${url.search}`);
 };
