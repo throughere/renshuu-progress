@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { page } from "$app/state";
   import * as Card from "#lib/components/ui/card/index.ts";
   import type { PageProps } from "./$types";
   let { data }: PageProps = $props();
@@ -40,8 +41,9 @@
       <Card.Root>
         <Card.Header>
           <Card.Description>
-            <a href="/terms" class="underline-offset-4 hover:underline"
-              >All terms</a
+            <a
+              href="/terms{page.url.search}"
+              class="underline-offset-4 hover:underline">All terms</a
             >
           </Card.Description>
           <Card.Title class="text-3xl">{data.profile?.total}</Card.Title>
@@ -50,8 +52,9 @@
       <Card.Root>
         <Card.Header>
           <Card.Description>
-            <a href="/terms/vocab" class="underline-offset-4 hover:underline"
-              >Vocabulary</a
+            <a
+              href="/terms/vocab{page.url.search}"
+              class="underline-offset-4 hover:underline">Vocabulary</a
             >
           </Card.Description>
           <Card.Title class="text-3xl">{data.profile?.total_vocab}</Card.Title>
@@ -60,8 +63,9 @@
       <Card.Root>
         <Card.Header>
           <Card.Description>
-            <a href="/terms/kanji" class="underline-offset-4 hover:underline"
-              >Kanji</a
+            <a
+              href="/terms/kanji{page.url.search}"
+              class="underline-offset-4 hover:underline">Kanji</a
             >
           </Card.Description>
           <Card.Title class="text-3xl">{data.profile?.total_kanji}</Card.Title>
@@ -70,8 +74,9 @@
       <Card.Root>
         <Card.Header>
           <Card.Description>
-            <a href="/terms/grammar" class="underline-offset-4 hover:underline"
-              >Grammar</a
+            <a
+              href="/terms/grammar{page.url.search}"
+              class="underline-offset-4 hover:underline">Grammar</a
             >
           </Card.Description>
           <Card.Title class="text-3xl">{data.profile?.total_grammar}</Card.Title
@@ -81,8 +86,9 @@
       <Card.Root>
         <Card.Header>
           <Card.Description>
-            <a href="/terms/sent" class="underline-offset-4 hover:underline"
-              >Sentences</a
+            <a
+              href="/terms/sent{page.url.search}"
+              class="underline-offset-4 hover:underline">Sentences</a
             >
           </Card.Description>
           <Card.Title class="text-3xl">{data.profile?.total_sent}</Card.Title>

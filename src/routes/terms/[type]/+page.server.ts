@@ -21,7 +21,7 @@ const jlpt_order = sql`case ${kanjiTerm.jlpt}
   else 6
 end`;
 
-// Calculated active mastery (only studied vactors) 
+// Calculated active mastery (only studied vactors)
 const active_mastery = sql<number>`coalesce(round(avg(${studyVector.mastery_perc}) filter (where ${studyVector.mastery_perc} <> 0)), 0)::int`;
 
 export const load: PageServerLoad = async ({ parent, params }) => {
