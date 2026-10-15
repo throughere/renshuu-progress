@@ -2,9 +2,7 @@
   "version": "8",
   "dialect": "postgres",
   "id": "9c71af0a-8275-490f-96bc-6e2d1f68f1f9",
-  "prevIds": [
-    "0982b9fc-9466-4080-82d0-0d1dcc5bfa67"
-  ],
+  "prevIds": ["0982b9fc-9466-4080-82d0-0d1dcc5bfa67"],
   "ddl": [
     {
       "isRlsEnabled": false,
@@ -1096,14 +1094,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "profile_id"
-      ],
+      "columns": ["profile_id"],
       "schemaTo": "public",
       "tableTo": "profile",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "level_progress_profile_id_profile_id_fkey",
@@ -1113,14 +1107,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "profile_id"
-      ],
+      "columns": ["profile_id"],
       "schemaTo": "public",
       "tableTo": "profile",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "streak_profile_id_profile_id_fkey",
@@ -1130,14 +1120,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "profile_id"
-      ],
+      "columns": ["profile_id"],
       "schemaTo": "public",
       "tableTo": "profile",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "vocab_term_profile_id_profile_id_fkey",
@@ -1147,14 +1133,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "profile_id"
-      ],
+      "columns": ["profile_id"],
       "schemaTo": "public",
       "tableTo": "profile",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "kanji_term_profile_id_profile_id_fkey",
@@ -1164,14 +1146,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "profile_id"
-      ],
+      "columns": ["profile_id"],
       "schemaTo": "public",
       "tableTo": "profile",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "grammar_term_profile_id_profile_id_fkey",
@@ -1181,14 +1159,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "profile_id"
-      ],
+      "columns": ["profile_id"],
       "schemaTo": "public",
       "tableTo": "profile",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "sentence_term_profile_id_profile_id_fkey",
@@ -1198,14 +1172,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "profile_id"
-      ],
+      "columns": ["profile_id"],
       "schemaTo": "public",
       "tableTo": "profile",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "study_vector_profile_id_profile_id_fkey",
@@ -1214,11 +1184,7 @@
       "table": "study_vector"
     },
     {
-      "columns": [
-        "profile_id",
-        "category",
-        "level"
-      ],
+      "columns": ["profile_id", "category", "level"],
       "nameExplicit": false,
       "name": "level_progress_pkey",
       "entityType": "pks",
@@ -1226,10 +1192,7 @@
       "table": "level_progress"
     },
     {
-      "columns": [
-        "profile_id",
-        "category"
-      ],
+      "columns": ["profile_id", "category"],
       "nameExplicit": false,
       "name": "streak_pkey",
       "entityType": "pks",
@@ -1237,10 +1200,7 @@
       "table": "streak"
     },
     {
-      "columns": [
-        "profile_id",
-        "id"
-      ],
+      "columns": ["profile_id", "id"],
       "nameExplicit": false,
       "name": "vocab_term_pkey",
       "entityType": "pks",
@@ -1248,10 +1208,7 @@
       "table": "vocab_term"
     },
     {
-      "columns": [
-        "profile_id",
-        "id"
-      ],
+      "columns": ["profile_id", "id"],
       "nameExplicit": false,
       "name": "kanji_term_pkey",
       "entityType": "pks",
@@ -1259,10 +1216,7 @@
       "table": "kanji_term"
     },
     {
-      "columns": [
-        "profile_id",
-        "id"
-      ],
+      "columns": ["profile_id", "id"],
       "nameExplicit": false,
       "name": "grammar_term_pkey",
       "entityType": "pks",
@@ -1270,10 +1224,7 @@
       "table": "grammar_term"
     },
     {
-      "columns": [
-        "profile_id",
-        "id"
-      ],
+      "columns": ["profile_id", "id"],
       "nameExplicit": false,
       "name": "sentence_term_pkey",
       "entityType": "pks",
@@ -1281,12 +1232,7 @@
       "table": "sentence_term"
     },
     {
-      "columns": [
-        "profile_id",
-        "termtype",
-        "term_id",
-        "name"
-      ],
+      "columns": ["profile_id", "termtype", "term_id", "name"],
       "nameExplicit": false,
       "name": "study_vector_pkey",
       "entityType": "pks",
@@ -1294,9 +1240,7 @@
       "table": "study_vector"
     },
     {
-      "columns": [
-        "id"
-      ],
+      "columns": ["id"],
       "nameExplicit": false,
       "name": "profile_pkey",
       "schema": "public",

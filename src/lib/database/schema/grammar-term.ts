@@ -23,7 +23,7 @@ export const grammarTerm = pgTable(
     correct_count: integer().notNull(),
     missed_count: integer().notNull(),
     mastery_avg_perc: smallint().notNull(),
-    introduced_date: date()
+    introduced_date: date(),
   },
   (t) => [primaryKey({ columns: [t.profile_id, t.id] })],
 );
