@@ -64,6 +64,7 @@ export type UserData = {
   correct_count: number;
   missed_count: number;
   mastery_avg_perc: string;
+  introduced_date: string;
   study_vectors: Record<string, StudyVector>;
 };
 

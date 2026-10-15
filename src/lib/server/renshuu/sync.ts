@@ -102,6 +102,7 @@ export const sync = async () => {
     correct_count: term.user_data.correct_count,
     missed_count: term.user_data.missed_count,
     mastery_avg_perc: Number(term.user_data.mastery_avg_perc),
+    introduced_date: toDate(term.user_data.introduced_date)
   }));
 
   const kanji_rows = kanji_data.contents.terms.map((term) => ({
@@ -119,6 +120,7 @@ export const sync = async () => {
     correct_count: term.user_data.correct_count,
     missed_count: term.user_data.missed_count,
     mastery_avg_perc: Number(term.user_data.mastery_avg_perc),
+    introduced_date: toDate(term.user_data.introduced_date)
   }));
 
   const grammar_rows = grammar_data.contents.terms.map((term) => ({
@@ -132,6 +134,7 @@ export const sync = async () => {
     correct_count: term.user_data.correct_count,
     missed_count: term.user_data.missed_count,
     mastery_avg_perc: Number(term.user_data.mastery_avg_perc),
+    introduced_date: toDate(term.user_data.introduced_date)
   }));
 
   const sent_rows = sent_data.contents.terms.map((term) => ({
@@ -142,6 +145,7 @@ export const sync = async () => {
     correct_count: term.user_data.correct_count,
     missed_count: term.user_data.missed_count,
     mastery_avg_perc: Number(term.user_data.mastery_avg_perc),
+    introduced_date: toDate(term.user_data.introduced_date)
   }));
 
   const vector_rows = [

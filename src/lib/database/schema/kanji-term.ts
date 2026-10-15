@@ -1,5 +1,6 @@
 import {
   integer,
+  date,
   pgTable,
   primaryKey,
   smallint,
@@ -27,6 +28,7 @@ export const kanjiTerm = pgTable(
     correct_count: integer().notNull(),
     missed_count: integer().notNull(),
     mastery_avg_perc: smallint().notNull(),
+    introduced_date: date()
   },
   (t) => [primaryKey({ columns: [t.profile_id, t.id] })],
 );
